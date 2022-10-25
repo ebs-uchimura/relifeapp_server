@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+    <title>店舗登録画面</title>
+  </head>
+  <body>
+    <h2>店舗登録画面</h2>
+    <form method="post" action="/reg_shop">
+        <table class="registertbl">
+            <tr>
+                <th>項目</th>
+                <th>入力</th>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>（自動発行）</td>
+            </tr>
+            <tr>
+                <td>チェーンID</td>
+                <td><input type="search" class="standard" id="chainid" size="30" name="chainid" placeholder="チェーン名を入力" autocomplete="off" required><button id="usersearch">検索</button></td>
+            </tr>
+            <tr>
+                <td>店舗名</td>
+                <td><input type="text" class="standard" name="shopname" size="30" placeholder="店舗名を入力" autocomplete="off" required></td>
+            </tr>
+            <form class="h-adr">
+                <tr>
+                    <td>郵便番号</td>
+                    <td><span class="p-country-name" style="display:none;">Japan</span>
+                        〒<input type="text" class="p-postal-code" size="8" maxlength="8"><br></td>
+                </tr>
+                <tr>
+                    <td>住所</td>
+                    <td><input type="text" class="p-region p-locality p-street-address p-extended-address"></td>
+                </tr>
+            </form>
+            <tr>
+                <td>電話番号</td>
+                <td><input type="text" class="standard" name="telephone" size="30" placeholder="電話番号を入力" autocomplete="off" required></td>
+            </tr>
+            <tr>
+                <td>平日開店時間</td>
+                <td><input type="time" class="standard" name="weekdaystarttime"></td>
+            </tr>
+             <tr>
+                <td>平日閉店時間</td>
+                <td><input type="time" class="standard" name="weekdayendtime"></td>
+            </tr>
+            <tr>
+                <td>休日開店時間1</td>
+                <td><input type="time" class="standard" name="holidaystarttime1"></td>
+            </tr>
+            <tr>
+                <td>休日閉店時間1</td>
+                <td><input type="time" class="standard" name="holidayendtime1"></td>
+            </tr>
+            <tr>
+                <td>休日開店時間2</td>
+                <td><input type="time" class="standard" name="holidaystarttime2"></td>
+            </tr>
+            <tr>
+                <td>休日閉店時間2</td>
+                <td><input type="time" class="standard" name="holidayendtime2"></td>
+            </tr>
+        </table>
+        <div class="registarea">
+            <input class="standard" type="submit" value="登録する">
+        </div>
+    </form>
+    <footer>
+        <p><small>&copy; 2022 Re:Life Co., Ltd. </small></p> 
+    </footer>
+  </body>
+</html>

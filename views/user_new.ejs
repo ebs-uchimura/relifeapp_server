@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>ユーザ登録画面</title>
+  </head>
+  <body>
+    <h2>ユーザ登録画面</h2>
+    <form method="post" action="/reg_user">
+        <table class="registertbl">
+            <tr>
+                <th>項目</th>
+                <th>入力</th>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>（自動発行）</td>
+            </tr>
+            <tr>
+                <td>ユーザ名</td>
+                <td><input type="text" class="standard" name="username" size="30" placeholder="ユーザ名を入力" autocomplete="off" required></td>
+            </tr>
+            <tr>
+                <td>年齢</td>
+                <td><input type="number" class="standard" name="age" value="30" required></td>
+            </tr>
+            <tr>
+                <td>性別</td>
+                <td><input type="radio" class="standard" name="gender" value="male" checked="checked">男
+                    <input type="radio" class="standard" name="gender" value="female">女</td>
+            </tr>
+            <tr>
+                <td>メールアドレス</td>
+                <td><input type="text" name="email" class="standard" size="50" pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}" placeholder="メールアドレスを入力" required></td>
+            </tr>
+            <tr>
+                <td>ログインID</td>
+                <td><input type="text" class="standard" name="loginId" placeholder="ログインIDを入力" required></td>
+            </tr>
+            <tr>
+                <td>パスワード</td>
+                <td><input type="password" class="standard" name="loginPass" maxlength="20" placeholder="パスワードを入力" required></td>
+            </tr>
+        </table>
+        <div class="registarea">
+            <input class="standard" type="submit" value="登録する">
+        </div>
+    </form>
+    <footer>
+        <p><small>&copy; 2022 Re:Life Co., Ltd. </small></p> 
+    </footer>
+  </body>
+</html>

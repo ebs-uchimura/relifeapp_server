@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="/js/index.js"></script>
+	</script>
+    <title>予約管理画面</title>
+  </head>
+  <body>
+    <h1>予約管理画面</h1>
+    <table class="main">
+        <tr>
+            <th class="narrow">ID</th>
+            <th class="narrow">ユーザID</th>
+            <th class="narrow">座席ID</th>
+            <th class="wide">予約開始時間</th>
+            <th class="wide">予約終了時間</th>
+        </tr>
+        <% for (var i = 0; i < data.length; i++) { %>
+            <tr>
+                <td>
+                    <%= data[i].id %>
+                </td>
+                <td>
+                    <%= data[i].userid %>
+                </td>
+                <td>
+                    <%= data[i].seatid %>
+                </td>
+                <td class="time1">
+                    <%= start[i] %>
+                </td>
+                <td class="time2">
+                    <%= end[i] %>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/index.js"></script>
+	</script>
+    <title>ユーザ管理画面</title>
+  </head>
+  <body>
+    <h2>ユーザ管理画面</h2>
+    <button class="mainbtn" onclick="location.href='http://localhost:3000/user_reg'">ユーザ登録</button>
+    <button class="mainbtn mainedit" onclick="showEdit()">ユーザ編集</button>
+    <table class="maintbl">
+        <tr>
+            <th width="3%" class="edit">編集</th>
+            <th width="20%">ユーザ名</th>
+            <th width="10%">年齢</th>
+            <th width="10%">性別</th>
+            <th width="25%">メールアドレス</th>
+            <th width="10%">ログインID</th>
+            <th width="10%">パスワード</th>
+        </tr>
+        <% for (var i = 0; i < data.length; i++) { %>
+            <tr>
+                <td class="edit">
+                    <button onclick="location.href='http://localhost:3000/reg_user/<%= data[i].userid >'">編集</button>
+                </td>
+                <td class="icon <%= data[i].icon %>">
+                    <%= data[i].lastname + " " + data[i].firstname  %>
+                </td>
+                <td>
+                    <%= data[i].age %>
+                </td>
+                <td>
+                    <%= data[i].gender == 1 ? '男' : '女' %>
+                </td>
+                <td>
+                    <%= data[i].mailaddress %>
+                </td>
+                <td>
+                    <%= data[i].loginid %>
+                </td>
+                <td>
+                    ************
+                </td>
+            </tr>
+        <% } %>
+    </table>
+    <footer>
+        <p><small>&copy; 2022 Re:Life Co., Ltd. </small></p> 
+    </footer>
+    <script src="/js/function.js"></script>
+  </body>
+</html>

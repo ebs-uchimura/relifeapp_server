@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/index.js"></script>
+    <title>予約登録画面</title>
+  </head>
+  <body>
+    <h2>予約登録画面</h2>
+    <form method="post" action="/reg_reserve">
+        <table class="registertbl">
+            <tr>
+                <th>項目</th>
+                <th>入力</th>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>（自動発行）</td>
+            </tr>
+            <tr>
+                <td>ユーザID</td>
+                <td><input type="search" class="standard" id="userid" size="30" name="userid" placeholder="ユーザ名を入力" autocomplete="off" required><button id="usersearch">検索</button></td>
+            </tr>
+            <tr>
+                <td>座席ID</td>
+                <td><input type="search" class="standard" id="seatid" size="30" name="seatid" placeholder="店舗名を入力" autocomplete="off" required><button id="seatsearch">検索</button></td>
+            </tr>
+            <tr>
+                <td>予約開始時間</td>
+                <td><input type="time" class="standard" name="starttime"></td>
+            </tr>
+            <tr>
+                <td>予約終了時間</td>
+                <td><input type="time" class="standard" name="endtime"></td>
+            </tr>
+        </table>
+        <div class="registarea">
+            <input class="standard" type="submit" value="登録する">
+        </div>
+    </form>
+    <footer>
+        <p><small>&copy; 2022 Re:Life Co., Ltd. </small></p> 
+    </footer>
+  </body>
+</html>

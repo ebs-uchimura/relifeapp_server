@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	</script>
+    <title>店舗管理画面</title>
+  </head>
+  <body>
+    <h2>店舗管理画面</h2>
+    <button type="mainbtn" onclick="location.href='http://localhost:3000/shop_reg'">店舗登録</button>
+    <button class="mainbtn mainedit" onclick="showEdit()">店舗編集</button>
+    
+    <table class="maintbl">
+        <tr>
+            <th width="3%" class="edit">編集</th>
+            <th class="3%">ID</th>
+            <th class="3%">チェーンID</th>
+            <th class="8%">店舗名</th>
+            <th class="8%">郵便番号</th>
+            <th class="15%">住所</th>
+            <th class="10%">電話番号</th>
+            <th class="10%">平日開店時間</th>
+            <th class="10%">平日閉店時間</th>
+            <th class="10%">休日開店時間1</th>
+            <th class="10%">休日閉店時間1</th>
+            <th class="10%">休日開店時間2</th>
+            <th class="10%">休日閉店時間2</th>
+        </tr>
+        <% for (var i = 0; i < data.length; i++) { %>
+            <tr>
+                <td class="edit">
+                    <button onclick="location.href='http://localhost:3000/reg_shop/<%= data[i].shopid >'">編集</button>
+                </td>
+                <td>
+                    <%= data[i].id %>
+                </td>
+                <td>
+                    <%= data[i].chainid %>
+                </td>
+                <td>
+                    <%= data[i].shopname %>
+                </td>
+                <td>
+                    <%= data[i].zipcode %>
+                </td>
+                <td>
+                    <%= data[i].shopaddress %>
+                </td>
+                <td>
+                    <%= data[i].telephone %>
+                </td>
+                <td>
+                    <%= data[i].weekdayopen %>
+                </td>
+                <td>
+                    <%= data[i].weekdayclose %>
+                </td>
+                <td>
+                    <%= data[i].holidayopen1 %>
+                </td>
+                <td>
+                    <%= data[i].holidayclose1 %>
+                </td>
+                <td>
+                    <%= data[i].holidayopen2 %>
+                </td>
+                <td>
+                    <%= data[i].holidayclose2 %>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+    <footer>
+        <p><small>&copy; 2022 Re:Life Co., Ltd. </small></p> 
+    </footer>
+    <script src="/js/function.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+/* user */
+create table user (
+    id int(11) auto_increment primary key,
+    lastname varchar(20) not null, 
+    firstname varchar(20), 
+    age int(11), 
+    gender tinyint(1), 
+    mailaddress varchar(256),
+    loginid varchar(20) unique,
+    password varchar(256),
+    created_at timestamp not null default current_timestamp,
+    updated_at timestamp not null default  on update current_timestampcurrent_timestamp,
+    deleted_at timestamp 
+);
+
+/* shop */
+create table shop (
+    id int(11) auto_increment primary key,
+    shopname varchar(100),
+    zipcode varhcar(8),
+    shopaddress varchar(256),
+    telephone varchar(20),
+    weekdayopen date,
+    weekdayclose date,
+    holidayopen1 date,
+    holidayclose1 date,
+    holidayopen2 date,
+    holidayclose2 date,
+    jam int(11), 
+    latitude float,
+    longitude float,
+    img_url varchar(8190),
+    imgin_url varchar(8190),
+    twitter_url varchar(8190),
+    instagram_url varchar(8190),
+    facebook_url varchar(8190),
+    article varchar(500),
+    staffname varchar(100),
+    staffphone varchar(20),
+    created_at timestamp not null default current_timestamp,
+    updated_at timestamp not null default current_timestamp on update current_timestamp,
+    deleted_at timestamp 
+);
+
+/* menu */
+create table menu (
+    id int(11) auto_increment primary key,
+    menuid int(11),
+    shopid int(11),
+    menuname varchar(100),
+    price int(11),
+    article varchar(500),
+    created_at timestamp not null default current_timestamp,
+    updated_at timestamp not null default current_timestamp on update current_timestamp,
+    deleted_at timestamp 
+);
+
+/* reserve */
+create table reserve (
+    id int(11) auto_increment primary key,
+    menuid int(11),
+    shopid int(11),
+    menuname varchar(100),
+    price int(11),
+    article varchar(500),
+    created_at timestamp not null default current_timestamp,
+    updated_at timestamp not null default current_timestamp on update current_timestamp,
+    deleted_at timestamp 
+);

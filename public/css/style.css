@@ -1,0 +1,223 @@
+/* style.css */
+button.mainbtn {
+    width: 150px;
+    height: 50px;
+    margin-left: 50px;
+}
+
+button.editbtn {
+    width: 100px;
+    height: 40px;
+}
+
+/* CSS */
+.button-6 {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+.registarea {
+    margin-top: 20px;
+}
+
+.standard {
+    height: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 30px;
+}
+
+table.btntbl {
+    width: 600px;
+    text-align: center;
+}
+
+table.maintbl {
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+table.registertbl {
+    width: 800px;
+}
+  
+table tr {
+    border-bottom: solid 1px #eee;
+    cursor: pointer;
+    height: 50px;
+}
+  
+table.maintbl tr:nth-child(n + 2):hover {
+    background-color: rgb(255, 244, 246)
+}
+
+table th {
+    text-align: center;
+}
+  
+table td {
+    text-align: left;
+}
+
+table.btntbl tr td {
+    height: 200px;
+    text-align: center;
+}
+
+table th, td {
+    padding: 5px 0;
+}
+
+table th.edit, table td.edit {
+    display: none;
+}
+  
+table td.icon {
+    background-size: 35px;
+    background-position: left 5px center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+table td.icon:before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+table td.f6ed::before {
+    content: '\f6ed';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.f700::before {
+    content: '\f700';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.f6d5::before {
+    content: '\f6d5';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.f535::before {
+    content: '\f535';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.e599::before {
+    content: '\e599';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.e448::before {
+    content: '\e448';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.f7ab::before {
+    content: '\f7ab';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.e4f2::before {
+    content: '\e4f2';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.f4ba::before {
+    content: '\f4ba';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.f520::before {
+    content: '\f520';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.f6be::before {
+    content: '\f6be';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.e573::before {
+    content: '\e573';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.f578::before {
+    content: '\f578';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.f6c8::before {
+    content: '\f6c8';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+table td.f6d3::before {
+    content: '\f6d3';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
